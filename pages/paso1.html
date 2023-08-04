@@ -217,7 +217,7 @@
   </div>
   <!-- fin Navbar -->
 
-  <section class="section" style="z-index: 9999;">
+  <section class="section" style="z-index: 9999; top: 30%;">
     <div class="global-content">
       <div class="toggle-btn">
         <i class='bx bx-plus'></i>
@@ -243,37 +243,32 @@
   <div class="card1 card-body  mx-3 mx-md-8 mt-8 mb-4">
 
     <!-- CARD -->
-    <section class="row mb-4 card opacity-9">
-      <div class="container-fluid">
+    <section class="mb-4 card opacity-9">
+      <div class="container">
         <div class="row">
           <div class="col-10 mx-auto border-radius-lg">
-            <div class="row">
-              <h4 class="text-center mt-3 animate-text" id="animate-text1">ANÁLISIS DEL TERRENO.</h4>
-
-              <div class="col-xl-6 col-md-5 px-5 z-index-2 position-relative">
-                <div class="row ">
-                  <div class="input-group input-group-static py-3">
-                    <form onsubmit="return false;">
-                      <label for="hectareas">Cuantas hectáreas desea sembrar?</label>
-                      <input type="number" id="hectareas" value="3" class="form-control"
-                        placeholder="Digite la cantidad por metros²" min="0" step="0.5" required>
-                      <button onclick="calcularHerramientas()">Calcular</button>
-                    </form>
-                  </div>
+            <div class="row justify-content-center">
+              <h4 class="text-center mt-3 mb-5 animate-text" id="animate-text1">ANÁLISIS DEL TERRENO.</h4>
+              <!-- .......... -->
+              <div class="col-lg-3">
+                <div class="input-group mb-5 input-group-static">
+                  <label for="studyPrice" class="font-weight-bold">Gastos en laboratorio</label>
+                    <input type="number" class="form-control" placeholder="Digite el precio" id="studyPrice" min="0" step="0.01" required>
                 </div>
               </div>
-
-              <div class="col-xl-6 col-md-5 px-5 position-relative ">
-                <div class="row mb-3">
-                  <div class="input-group input-group-static py-3">
-                    <label for="studyPrice">Digite el Valor de la cotización</label>
-                    <input type="number" class="form-control" placeholder="Digite el precio" id="studyPrice" min="0"
-                      step="0.01" required>
-                  </div>
+              <!-- .......... -->
+                <div class="col-lg-3 ms-9">
+                  <form onsubmit="return false;">
+                    <div class="input-group w-100 input-group-static">
+                      <label for="hectareas" class="font-weight-bold">¿Cuantas hectáreas desea sembrar?</label>
+                      <input type="number" id="hectareas" value="3" class="form-control" placeholder="Digite la cantidad por metros²" min="0" step="0.5" required>
+                    </div>
+                    <div class="input-group mt-3 ms-n9 input-group-static">
+                      <button class="btn btn-success" onclick="calcularHerramientas()" >Calcular</button>
+                    </div>
+                  </form>  
                 </div>
-
-              </div>
-
+              <!-- .......... -->
             </div>
           </div>
         </div>
@@ -286,7 +281,7 @@
           <h4 class="text-center mt-3 animate-text" id="animate-text1">SUGERENCIA DE HERRAMIENTAS PARA EL ANALISIS.</h4>
           <div id="resultado">
             <div class="container">
-              <div class="col-14 row" id="herramientas-lista">
+              <div class="row" id="herramientas-lista">
                 <!-- sugerencias -->
               </div>
             </div>
@@ -417,7 +412,7 @@
 
     <!-- paginacion -->
     <div class="row card text-center mt-4 page-header opacity-9"
-      style=" width: 20rem; min-width: 20rem; height: 50px; min-height: 50px; position: sticky; left: 40.6%; bottom: 5px; z-index: 100;">
+      style=" width: 20rem; min-width: 20rem; height: 50px; min-height: 50px; position: sticky; align-self: center; bottom: 5px; z-index: 100;">
       <div class="col-12 mx-auto " style="padding-top: 7px;">
 
         <a href="../index.html">
